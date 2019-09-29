@@ -12,11 +12,9 @@
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write 'src/**/*.{js,jsx,css,md,json}'",
     "fix": "clear && yarn run fix:lint && yarn run fix:prettier",
-    "start": "clear && yarn run develop",
+    "start": "clear && gatsby clean && yarn run develop",
     "serve": "gatsby serve",
-    "test": "clear && jest",
-    "storybook": "NODE_ENV=production start-storybook -s public",
-    "build-storybook": "NODE_ENV=production build-storybook -s public"
+    "test": "yarn fix"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",

@@ -1,7 +1,6 @@
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
 import { Alert } from "antd";
 import "antd/dist/antd.css";
@@ -71,13 +70,28 @@ function Header({ siteTitle }) {
                 Submit
               </a>
               <a
-                href="  https://github.com/Mozart409/wallpapersplus/projects/1"
+                href="https://github.com/Mozart409/wallpapersplus/projects/1"
                 className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Changelog / Upcoming
+                Changelog
               </a>
+              <br />
+              <div>
+                <label
+                  class="block text-white text-sm font-bold mb-2"
+                  for="username"
+                >
+                  Username
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                ></input>
+              </div>
             </div>
           </div>
         </div>
