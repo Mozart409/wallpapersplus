@@ -8,6 +8,8 @@
 
 [![stars](https://img.shields.io/github/stars/Mozart409/gatsby-custom-tailwind?style=for-the-badge)](#stars)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMozart409%2Fwallpapersplus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FMozart409%2Fwallpapersplus?ref=badge_large)
+
 ## Usage
 
 - Just copy all Images into the following folder
