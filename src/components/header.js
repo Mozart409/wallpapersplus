@@ -81,15 +81,15 @@ function Header({ siteTitle }) {
               <div>
                 <label
                   class="block text-white text-sm font-bold mb-2"
-                  for="username"
+                  for="idSearch"
                 >
-                  Username
+                  Search
                 </label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
+                  id="idSearch"
                   type="text"
-                  placeholder="Username"
+                  placeholder="Work in Progress"
                 ></input>
               </div>
             </div>
