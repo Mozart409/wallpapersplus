@@ -2,11 +2,13 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-import { Alert } from "antd";
+import { Alert, Input } from "antd";
+
 import "antd/dist/antd.css";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
+  const { Search } = Input;
 
   const Query2 = useStaticQuery(graphql`
     query WallZip {
@@ -78,14 +80,13 @@ function Header({ siteTitle }) {
                 Changelog
               </a>
               <br />
-              <div>
-
-                <input
-                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="idSearch"
-                  type="text"
+              <div className="mt-4 w-full">
+                <Search
+                  allowClear
                   placeholder="Work in Progress"
-                ></input>
+                  onSearch={value => console.log(value)}
+                  style={{ width: 300 }}
+                />
               </div>
             </div>
           </div>
