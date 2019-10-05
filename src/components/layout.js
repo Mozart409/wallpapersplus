@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Header from "./header";
 
 import "typeface-raleway";
+import "typeface-work-sans";
 import "../css/main.css";
 
 function Layout({ children }) {
