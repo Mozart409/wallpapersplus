@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import Tags from "./Tags";
 
 function Gallery() {
   const ImgQuery = useStaticQuery(graphql`
@@ -16,11 +16,8 @@ function Gallery() {
             publicURL
             ext
             mode
-            childImageSharp {
-              fluid(fit: FILL) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+            dir
+            relativeDirectory
           }
         }
         totalCount
@@ -29,7 +26,10 @@ function Gallery() {
   `);
   return (
     <div>
-      <div className="justify-center flex flex-wrap">
+      <Tags></Tags>
+      <div
+
+       className="justify-center flex flex-wrap">
         {ImgQuery.allFile.edges.map(({ node }) => (
           <a
             href={node.publicURL}
@@ -41,9 +41,9 @@ function Gallery() {
               key={node.id}
               className="shadow-2xl border overflow-hidden rounded-lg mx-2 my-4 p-2 bg-white"
             >
-              <Img
+              <img
                 key={node.id}
-                sizes={node.childImageSharp.fluid}
+                src={node.publicURL}
                 className="rounded-lg w-64 "
                 alt={node.base}
               />

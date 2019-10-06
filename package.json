@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -o",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-    "fix:prettier": "prettier --write 'src/**/*.{js,jsx,css,md,json}'",
+    "fix:prettier": "prettier --write 'src/*/*.{js,jsx,css,md,json}'",
     "fix": "clear && yarn run fix:lint && yarn run fix:prettier",
     "start": "clear && gatsby clean && yarn run develop",
     "serve": "gatsby serve",
