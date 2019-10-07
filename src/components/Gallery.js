@@ -27,9 +27,7 @@ function Gallery() {
   return (
     <div>
       <Tags></Tags>
-      <div
-
-       className="justify-center flex flex-wrap">
+      <div className="justify-center flex flex-wrap">
         {ImgQuery.allFile.edges.map(({ node }) => (
           <a
             href={node.publicURL}

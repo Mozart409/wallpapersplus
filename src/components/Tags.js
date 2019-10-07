@@ -15,7 +15,7 @@ function Tags() {
       }
     }
   `);
-console.log(TagQuery);
+  console.log(TagQuery);
   return (
     <div className="Tags flex justify-between mt-4 inline-block align-middle">
       <div>
