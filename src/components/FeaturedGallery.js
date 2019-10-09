@@ -13,11 +13,7 @@ function FeaturedGallery() {
             id
             publicURL
             prettySize
-            childImageSharp {
-              fluid(fit: FILL) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+
           }
         }
         totalCount
@@ -51,9 +47,9 @@ function FeaturedGallery() {
                 rel="noopener noreferrer"
               >
                 <div>
-                  <Img
+                  <img
                     key={node.id}
-                    sizes={node.childImageSharp.fluid}
+                    src={node.publicURL}
                     className="rounded-lg w-64 mx-auto border-2 border-gray-800 my-8"
                     alt={node.base}
                   />

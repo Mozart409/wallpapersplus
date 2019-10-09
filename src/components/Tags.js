@@ -16,6 +16,11 @@ function Tags() {
     }
   `);
   console.log(TagQuery);
+  if (TagQuery.allFile.edges.node.relativeDirectory === "") {
+    console.log("Empty");
+  } else {
+    console.log(TagQuery.allFile.edges.node.relativeDirectory);
+  }
   return (
     <div className="Tags flex justify-between mt-4 inline-block align-middle">
       <div>
