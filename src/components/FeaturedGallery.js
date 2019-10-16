@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 import { Carousel, Icon } from "antd";
 
 function FeaturedGallery() {
@@ -13,7 +12,6 @@ function FeaturedGallery() {
             id
             publicURL
             prettySize
-
           }
         }
         totalCount
