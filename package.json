@@ -11,6 +11,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -o",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+
     "fix:prettier": "prettier --write src/*.{js,jsx,css,md,json}",
     "fix": "yarn run fix:lint && yarn run fix:prettier",
     "start": "yarn run develop",
