@@ -1,5 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+
+import Img from "gatsby-image"
+
 import { Carousel, Icon } from "antd";
 
 function FeaturedGallery() {
@@ -12,6 +15,13 @@ function FeaturedGallery() {
             id
             publicURL
             prettySize
+
+            childImageSharp {
+              fixed(width: 250) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+
           }
         }
         totalCount
@@ -27,39 +37,27 @@ function FeaturedGallery() {
           dots="true"
           effect="fade"
           autoplay
-          className="mb-4 bg-gray-200 rounded-lg"
+          
         >
           {ImgFeatured.allFile.edges.map(({ node }) => (
             <div className="flex">
-              <Icon
-                className="text-center float-left justify-center self-auto"
-                style={{ fontSize: "2rem", color: "#3c3c3c" }}
-                type="left-circle"
-                theme="filled"
-                onClick=""
-              />
+
               <a
                 href={node.publicURL}
                 key={node.id}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div>
-                  <img
+                <div className="flex">
+                  <Img
                     key={node.id}
-                    src={node.publicURL}
-                    className="rounded-lg w-64 mx-auto border-2 border-gray-800 my-8"
+                    fixed={node.childImageSharp.fixed}
+                    className="rounded-lg mx-auto border-2 border-gray-800 my-4"
                     alt={node.base}
                   />
                 </div>
               </a>
-              <Icon
-                className="text-center float-right justify-center"
-                style={{ fontSize: "2rem", color: "#3c3c3c" }}
-                type="right-circle"
-                theme="filled"
-                onClick="next()"
-              />
+
             </div>
           ))}
         </Carousel>

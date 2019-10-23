@@ -30,3 +30,19 @@ h6,
 .FooterColor {
   background: linear-gradient(to bottom, #2a6baf, #22568c);
 }
+
+.UprightText {
+  font-weight: bold;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  border-radius: 0.25em;
+  color: white;
+  background-color: #2a6baf;
+  margin: 5px;
+  
+}

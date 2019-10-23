@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import _ from "lodash";
 
 function Tags() {
   const TagQuery = useStaticQuery(graphql`
@@ -15,12 +16,12 @@ function Tags() {
       }
     }
   `);
-  console.log(TagQuery);
-  if (TagQuery.allFile.edges.node.relativeDirectory === "") {
-    console.log("Empty");
-  } else {
-    console.log(TagQuery.allFile.edges.node.relativeDirectory);
-  }
+  let result = _.omitBy(TagQuery.allFile.edges.node.relativeDirectory, _.isNil);
+console.log("----------");
+console.log(result);
+console.log("----------");
+
+  
   return (
     <div className="Tags flex justify-between mt-4 inline-block align-middle">
       <div>

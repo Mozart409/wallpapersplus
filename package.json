@@ -1,8 +1,9 @@
 {
-  "name": "Wallpapersplus",
+  "name": "wplus",
   "description": "Wallpapers for iOS devices",
   "version": "0.1.0",
   "author": "Mozart409",
+  "license": "MIT",
   "scripts": {
     "analyze:lint": "eslint --ext .jsx --ext .js .",
     "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
@@ -10,11 +11,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop -o",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-    "fix:prettier": "prettier --write 'src/*/*.{js,jsx,css,md,json}'",
-    "fix": "clear && yarn run fix:lint && yarn run fix:prettier",
-    "start": "clear && yarn run develop",
+
+    "fix:prettier": "prettier --write src/*.{js,jsx,css,md,json}",
+    "fix": "yarn run fix:lint && yarn run fix:prettier",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
-    "test": "yarn fix"
+    "test": "yarn fix",
+    "start2": "gatsby develop -H 192.168.0.6",
+    "start3": "gatsby develop -H 0.0.0.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -71,7 +75,6 @@
     "jailbreak",
     "iOS"
   ],
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@storybook/addon-actions": "^5.2.1",
