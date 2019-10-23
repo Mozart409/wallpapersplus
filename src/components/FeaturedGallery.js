@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
 import { Carousel, Icon } from "antd";
 
@@ -21,7 +21,6 @@ function FeaturedGallery() {
                 ...GatsbyImageSharpFixed
               }
             }
-
           }
         }
         totalCount
@@ -33,15 +32,9 @@ function FeaturedGallery() {
     <div className="justify-center">
       <h2 className="text-gray-900 font-semibold text-2xl">Featured Gallery</h2>
       <div className="">
-        <Carousel
-          dots="true"
-          effect="fade"
-          autoplay
-          
-        >
+        <Carousel dots="true" effect="fade" autoplay>
           {ImgFeatured.allFile.edges.map(({ node }) => (
             <div className="flex">
-
               <a
                 href={node.publicURL}
                 key={node.id}
@@ -57,7 +50,6 @@ function FeaturedGallery() {
                   />
                 </div>
               </a>
-
             </div>
           ))}
         </Carousel>

@@ -17,11 +17,10 @@ function Tags() {
     }
   `);
   let result = _.omitBy(TagQuery.allFile.edges.node.relativeDirectory, _.isNil);
-console.log("----------");
-console.log(result);
-console.log("----------");
+  console.log("----------");
+  console.log(result);
+  console.log("----------");
 
-  
   return (
     <div className="Tags flex justify-between mt-4 inline-block align-middle">
       <div>

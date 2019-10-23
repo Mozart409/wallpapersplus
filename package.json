@@ -9,16 +9,13 @@
     "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
     "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
     "build": "gatsby build",
-    "develop": "gatsby develop -o",
+    "develop": "gatsby develop -o -H 0.0.0.0",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-
-    "fix:prettier": "prettier --write src/*.{js,jsx,css,md,json}",
+    "fix:prettier": "prettier --write src/**/*.{js,jsx,css,md,json}",
     "fix": "yarn run fix:lint && yarn run fix:prettier",
     "start": "yarn run develop",
     "serve": "gatsby serve",
-    "test": "yarn fix",
-    "start2": "gatsby develop -H 192.168.0.6",
-    "start3": "gatsby develop -H 0.0.0.0"
+    "test": "yarn fix"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",

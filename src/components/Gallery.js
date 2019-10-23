@@ -26,7 +26,6 @@ function Gallery() {
   `);
   return (
     <div>
-      
       <div className="justify-center flex flex-wrap">
         {ImgQuery.allFile.edges.map(({ node }) => (
           <a
