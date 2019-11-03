@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import Img from "gatsby-image";
 
-import { Carousel, Icon } from "antd";
+import { Carousel } from "antd";
 
 function FeaturedGallery() {
   const ImgFeatured = useStaticQuery(graphql`
@@ -15,10 +15,9 @@ function FeaturedGallery() {
             id
             publicURL
             prettySize
-
             childImageSharp {
-              fixed(width: 250) {
-                ...GatsbyImageSharpFixed
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -31,10 +30,10 @@ function FeaturedGallery() {
   return (
     <div className="justify-center">
       <h2 className="text-gray-900 font-semibold text-2xl">Featured Gallery</h2>
-      <div className="">
-        <Carousel dots="true" effect="fade" autoplay>
+      <div>
+        <Carousel dotPosition="top" effect="fade" autoplay>
           {ImgFeatured.allFile.edges.map(({ node }) => (
-            <div className="flex">
+            <div className="flex flex-wrap w-full">
               <a
                 href={node.publicURL}
                 key={node.id}
@@ -43,13 +42,13 @@ function FeaturedGallery() {
               >
                 <div className="flex">
                   <Img
-                    key={node.id}
-                    fixed={node.childImageSharp.fixed}
-                    className="rounded-lg mx-auto border-2 border-gray-800 my-4"
+                    fluid={node.childImageSharp.fluid}
                     alt={node.base}
+                    key={node.id}
+                    className="p-4 mt-4 mx-auto h-auto w-72 rounded border-4 border-solid border-gray-700"
                   />
                 </div>
-              </a>
+             </a>
             </div>
           ))}
         </Carousel>

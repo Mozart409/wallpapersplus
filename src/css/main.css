@@ -1,14 +1,6 @@
-.ant-carousel .slick-slide {
-  background: transparent;
+.ant-carousel .slick-slide h3 {
+  color: #fff;
 }
-
-.slick-dots li {
-  background-color: #fff;
-  border: solid 2px #fff;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .PageProgress {
   position: sticky;
   top: 0;
