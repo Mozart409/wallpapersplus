@@ -10,6 +10,8 @@ module.exports = {
     }
   }
 },
-  variants: {},
+  variants: {
+    borderStyle: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
 }

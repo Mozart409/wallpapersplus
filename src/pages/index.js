@@ -6,6 +6,7 @@ import Gallery from "../components/Gallery";
 import FeaturedGallery from "../components/FeaturedGallery";
 import CookieScript from "../components/CookieScript";
 import ToTop from "../components/ToTop";
+import AddRepo from "../components/AddRepo";
 
 function IndexPage() {
   return (
@@ -31,7 +32,7 @@ function IndexPage() {
       />
       <CookieScript></CookieScript>
       <ToTop></ToTop>
-
+      <AddRepo></AddRepo>
       <FeaturedGallery></FeaturedGallery>
       <Gallery></Gallery>
     </Layout>

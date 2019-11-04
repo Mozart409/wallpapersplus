@@ -16,8 +16,8 @@ function FeaturedGallery() {
             publicURL
             prettySize
             childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
+              fixed(quality: 100, height: 500) {
+                ...GatsbyImageSharpFixed_tracedSVG
               }
             }
           }
@@ -42,13 +42,13 @@ function FeaturedGallery() {
               >
                 <div className="flex">
                   <Img
-                    fluid={node.childImageSharp.fluid}
+                    fixed={node.childImageSharp.fixed}
                     alt={node.base}
                     key={node.id}
                     className="p-4 mt-4 mx-auto h-auto w-72 rounded border-4 border-solid border-gray-700"
                   />
                 </div>
-             </a>
+              </a>
             </div>
           ))}
         </Carousel>
