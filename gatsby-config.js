@@ -12,7 +12,63 @@ module.exports = {
         stripMetadata: false
       }
     },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        // A unique name for the search index. This should be descriptive of
+        // what the index contains. This is required.
+        name: 'pictures',
 
+        // Set the search engine to create the index. This is required.
+        // The following engines are supported: flexsearch, lunr
+        engine: 'flexsearch',
+
+        // GraphQL query used to fetch all data for the search index. This is
+        // required.
+        query: `
+          {
+            allFile(sort: { fields: birthtime }) {
+              edges {
+                node {
+                  name
+                  id
+                  base
+                  birthTime(fromNow: true)
+                  relativeDirectory
+                  publicURL
+                  ext
+                  mode
+                  dir
+                  relativeDirectory
+                }
+              }
+            }
+          }
+        `,
+
+        // Field used as the reference value for each document.
+        // Default: 'id'.
+        ref: 'id',
+
+        // List of keys to store and make available in your UI. The values of
+        // the keys are taken from the normalizer function below.
+        // Default: all fields
+        store: ['id', 'name', 'relativeDirectory','base','dir','ext'],
+
+        // Function used to map the result from the GraphQL query. This should
+        // return an array of items to index in the form of flat objects
+        // containing properties to index. This is required.
+        normalizer: ({ data }) =>
+          data.allFile.edges.map(({ node }) => ({
+            id: node.id,
+            name: node.name,
+            relativeDirectory: node.relativeDirectory,
+            base: node.base,
+            dir: node.dir,
+            ext: node.ext,
+          })),
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
     {

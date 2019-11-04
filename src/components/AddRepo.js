@@ -6,7 +6,9 @@ import zebra from "../images/zebra.png";
 function AddRepo() {
   return (
     <div className="my-8">
-      <h2 className="text-2xl text-center">Add our repo to your favorite package manager</h2>
+      <h2 className="text-2xl text-center">
+        Add our repo to your favorite package manager
+      </h2>
       <div className="flex flex-wrap">
         <div className="w-1/2">
           <a
@@ -15,7 +17,11 @@ function AddRepo() {
             href="cydia://url/https://cydia.saurik.com/api/share#?source=https://mozart409.github.io/repo/"
           >
             <figure>
-              <img src={cydia} className="w-16 float-left "></img>
+              <img
+                src={cydia}
+                className="w-16 float-left "
+                alt="Cydia Icon"
+              ></img>
             </figure>
             <p className="float-left p-2 text-xl">Add to Cydia</p>
           </a>
@@ -30,6 +36,7 @@ function AddRepo() {
               <img
                 src={zebra}
                 className="w-16 float-right border-2 border-gray-700 border-solid rounded-lg hover:border-dashed"
+                alt="Zebra Icon"
               ></img>
             </figure>
             <p className="float-right p-2 text-xl">Add to Zebra</p>
