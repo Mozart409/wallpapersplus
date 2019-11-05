@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `WPlus`,
-    description: `Wallpapers for iOS devices`,
+    description: `Wallpapers for mobile devices`,
     author: `@mozart409`
   },
   plugins: [
@@ -125,6 +125,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images/walls/featured`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.wplus.space',
+        sitemap: 'https://www.wplus.space/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
 

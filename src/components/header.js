@@ -1,25 +1,32 @@
-import PropTypes from "prop-types";
 import React, { useState } from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { useFlexSearch } from "react-use-flexsearch";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { Alert, Input } from "antd";
+import { Alert } from "antd";
 
 import favicon from "../images/favicon.png";
 
 import "antd/dist/antd.css";
 
-function Header({ siteTitle }) {
-  const [isExpanded, toggleExpansion] = useState(false);
-  const { Search } = Input;
+export const SearchEngine = graphql`
+  query SearchEngine {
+    localSearchPictures {
+      index
+      id
+      store
+    }
+  }
+`;
 
-  const Query2 = useStaticQuery(graphql`
-    query WallZip {
-      allFile {
+function Header({ SearchEngine }) {
+  const [isExpanded, toggleExpansion] = useState(false);
+  const totalCount = useStaticQuery(graphql`
+    query TotalCounteQuery {
+      WallZip: allFile {
         totalCount
       }
     }
   `);
-
   return (
     <div>
       <nav id="MenuColor" className="MenuItems">
@@ -31,7 +38,7 @@ function Header({ siteTitle }) {
               alt="WPlus Logo"
             ></img>
             <span className="text-xl font-semibold">
-              {Query2.allFile.totalCount} Wallpapers
+              {totalCount.WallZip.totalCount} Wallpapers
             </span>
           </Link>
 
@@ -87,14 +94,7 @@ function Header({ siteTitle }) {
                 Changelog
               </a>
               <br />
-              <div className="mt-4 w-full">
-                <Search
-                  allowClear
-                  placeholder="Work in Progress"
-                  onSearch={value => console.log(value)}
-                  style={{ width: 300 }}
-                />
-              </div>
+              <div className="mt-4 w-full"></div>
             </div>
           </div>
         </div>
@@ -110,13 +110,5 @@ function Header({ siteTitle }) {
     </div>
   );
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-};
-
-Header.defaultProps = {
-  siteTitle: ``
-};
 
 export default Header;

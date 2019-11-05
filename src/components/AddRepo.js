@@ -6,9 +6,9 @@ import zebra from "../images/zebra.png";
 function AddRepo() {
   return (
     <div className="my-8">
-      <h2 className="text-2xl text-center">
+      <h1 className="text-2xl text-center">
         Add our repo to your favorite package manager
-      </h2>
+      </h1>
       <div className="flex flex-wrap">
         <div className="w-1/2">
           <a
