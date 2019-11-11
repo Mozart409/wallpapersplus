@@ -1,25 +1,16 @@
 import React, { useState } from "react";
-import { useFlexSearch } from "react-use-flexsearch";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { Alert } from "antd";
+
 
 import favicon from "../images/favicon.png";
 
 import "antd/dist/antd.css";
 
-export const SearchEngine = graphql`
-  query SearchEngine {
-    localSearchPictures {
-      index
-      id
-      store
-    }
-  }
-`;
-
-function Header({ SearchEngine }) {
+function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
+
   const totalCount = useStaticQuery(graphql`
     query TotalCounteQuery {
       WallZip: allFile {
@@ -27,6 +18,7 @@ function Header({ SearchEngine }) {
       }
     }
   `);
+
   return (
     <div>
       <nav id="MenuColor" className="MenuItems">
@@ -94,7 +86,7 @@ function Header({ SearchEngine }) {
                 Changelog
               </a>
               <br />
-              <div className="mt-4 w-full"></div>
+
             </div>
           </div>
         </div>

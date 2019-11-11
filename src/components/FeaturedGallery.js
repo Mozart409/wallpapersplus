@@ -33,7 +33,9 @@ function FeaturedGallery() {
       <div>
         <Carousel dotPosition="top" effect="fade" autoplay>
           {ImgFeatured.allFile.edges.map(({ node }) => (
-            <div className="flex flex-wrap w-full">
+            <div
+            key={node.id}
+            className="flex flex-wrap w-full">
               <a
                 href={node.publicURL}
                 key={node.id}
