@@ -37,3 +37,9 @@ h6,
   background-color: #2a6baf;
   margin: 5px;
 }
+
+
+.ais-SearchBox { margin: 1em 0; }
+.ais-Pagination { margin-top: 1em }
+.left-panel { float: left; width: 250px; }
+.right-panel { margin-left: 260px; }

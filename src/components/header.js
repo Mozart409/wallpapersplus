@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-
 import { Alert } from "antd";
 
+import SearchBar from "./SearchBar";
 
 import favicon from "../images/favicon.png";
 
@@ -18,6 +18,8 @@ function Header() {
       }
     }
   `);
+
+ 
 
   return (
     <div>
@@ -86,7 +88,7 @@ function Header() {
                 Changelog
               </a>
               <br />
-
+              <SearchBar></SearchBar>
             </div>
           </div>
         </div>

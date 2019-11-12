@@ -31,7 +31,6 @@ function IndexPage() {
         ]}
       />
 
-      
       <ToTop></ToTop>
       <AddRepo></AddRepo>
       <FeaturedGallery></FeaturedGallery>
