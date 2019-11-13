@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Tags from "./Tags";
 
 function Gallery() {
   const ImgQuery = useStaticQuery(graphql`

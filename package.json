@@ -9,12 +9,12 @@
     "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
     "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
     "build": "gatsby build",
-    "develop": "gatsby develop -o -H 127.0.0.1",
+    "develop": "gatsby develop -o -H 0.0.0.0",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write src/**/*.{js,jsx,css,md,json}",
     "fix": "yarn run fix:lint && yarn run fix:prettier",
     "start": "yarn run develop",
-    "serve": "gatsby serve -o -H 127.0.0.1",
+    "serve": "gatsby serve -o -H 0.0.0.0",
     "test": "yarn fix"
   },
   "dependencies": {
@@ -49,6 +49,7 @@
     "gatsby-transformer-sharp": "^2.2.16",
     "graphql": "14.5.4",
     "identity-obj-proxy": "^3.0.0",
+    "instantsearch.css": "^7.3.1",
     "jest": "^24.9.0",
     "prop-types": "15.7.2",
     "react": "16.9.0",

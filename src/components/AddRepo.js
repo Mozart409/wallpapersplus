@@ -14,6 +14,7 @@ function AddRepo() {
           <a
             className=""
             target="_blank"
+            rel="noopener noreferrer"
             href="cydia://url/https://cydia.saurik.com/api/share#?source=https://mozart409.github.io/repo/"
           >
             <figure>
@@ -30,6 +31,7 @@ function AddRepo() {
           <a
             className=""
             target="_blank"
+            rel="noopener noreferrer"
             href="zbra://sources/add/https://mozart409.github.io/repo/"
           >
             <figure>

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Alert } from "antd";
 
-import SearchBar from "./SearchBar";
-
 import favicon from "../images/favicon.png";
 
 import "antd/dist/antd.css";
@@ -18,8 +16,6 @@ function Header() {
       }
     }
   `);
-
- 
 
   return (
     <div>
@@ -37,7 +33,7 @@ function Header() {
           </Link>
 
           <button
-            className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white"
+            className="block md:hidden border border-white flex items-center px-3 py-2 rounded text-white mt-2"
             onClick={() => toggleExpansion(!isExpanded)}
           >
             <svg
@@ -55,7 +51,7 @@ function Header() {
               isExpanded ? `block` : `hidden`
             } md:block md:flex md:items-center w-full md:w-auto`}
           >
-            <div className="align-bottom">
+            <div className="align-bottom mt-2">
               <Link
                 to="/"
                 className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
@@ -87,8 +83,6 @@ function Header() {
               >
                 Changelog
               </a>
-              <br />
-              <SearchBar></SearchBar>
             </div>
           </div>
         </div>

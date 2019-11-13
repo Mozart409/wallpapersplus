@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import Gallery from "../components/Gallery";
 import FeaturedGallery from "../components/FeaturedGallery";
 import CookieScript from "../components/CookieScript";
+import SearchBar from "../components/SearchBar";
 import ToTop from "../components/ToTop";
 import AddRepo from "../components/AddRepo";
 
@@ -32,6 +33,7 @@ function IndexPage() {
       />
 
       <ToTop></ToTop>
+      <SearchBar></SearchBar>
       <AddRepo></AddRepo>
       <FeaturedGallery></FeaturedGallery>
       <Gallery></Gallery>

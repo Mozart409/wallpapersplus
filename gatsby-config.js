@@ -14,7 +14,7 @@ const myQuery = `
         extension
         prettySize
         publicURL
-        relativePath
+        image_url: "https://www.wplus.space" + publicURL
       }
     }
   }
