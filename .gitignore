@@ -10,3 +10,4 @@ package-lock.json
 
 # macOS
 .DS_Store
+now.json
