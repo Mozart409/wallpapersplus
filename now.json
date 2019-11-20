@@ -1,0 +1,9 @@
+{
+    "build": {
+        "env": {
+            "ALGOLIA_APP_ID": "@secretalgoliaappid",
+            "ALGOLIA_API_KEY": "@secretalgoliaapikey",
+            "ALGOLIA_INDEX_NAME": "@secretalgoliaindexname"
+        }
+    }
+}
