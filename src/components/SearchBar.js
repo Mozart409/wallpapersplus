@@ -21,9 +21,9 @@ const searchClient = algoliasearch(
 
 function Hit(props) {
   return (
-    <div className="justify-center flex flex-wrap">
+    <div className="justify-center flex flex-wrap mx-auto">
       <Link to={props.hit.publicURL}>
-        <div className="antialiased shadow-2xl border rounded-lg mx-2 my-4 p-2 bg-white">
+        <div className="antialiased shadow-2xl border mx-auto rounded-lg mx-2 my-4 p-2 bg-white">
           <img
             src={props.hit.publicURL}
             className="rounded-lg w-48 mx-auto border border-solid border-gray-400"
@@ -61,7 +61,7 @@ function SearchBar() {
             attribute="relativeDirectory"
           />
           <Configure analytics={true} hitsPerPage={21} />
-          <img src={AlgoliaLogo} className="w-45 mt-2" alt="" />
+          <img src={AlgoliaLogo} className="w-45 mt-2 mb-4" alt="" />
         </div>
         <div className="w-1/1 md:w-3/4">
           <SearchBox showLoadingIndicator focusShortcuts={["/"]} />

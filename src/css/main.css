@@ -44,6 +44,8 @@ h6,
   padding-left: 0.5rem;
   padding-right: 1.5rem;
   margin-right: 1em;
+  font-size: 1rem;
+  width: 65%;
 }
 .ais-Pagination {
   margin: 0;
@@ -80,7 +82,6 @@ h6,
   margin-left: 0.3rem;
 }
 
-.ais-Hits-list,
 .ais-Pagination-list {
   margin: 0;
   padding: 0;
@@ -88,16 +89,27 @@ h6,
 }
 .ais-Hits-list,
 .ais-Hits-item {
-  margin: 0.5rem 0 0 -1rem;
-
-  margin-top: -1rem;
-  margin-left: -1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+
+@media (max-width: 640px) {
+  .ais-Hits-list{ width: 50% }
+}
+@media (max-width: 768px) {
+  .ais-Hits-list { width: 50% }
+}
+@media (max-width: 992) {
+  .ais-Hits-list { width: 50% }
+}
+@media (max-width: 1280px) {
+  .ais-Hits-list { width: 75%; }
+}
+
 .ais-Pagination {
   color: #3a4570;
 }
@@ -154,3 +166,4 @@ h6,
   writing-mode: horizontal-tb !important;
   text-decoration: none !important;
 }
+
