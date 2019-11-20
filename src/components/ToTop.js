@@ -5,7 +5,7 @@ function ToTop() {
   return (
     <div>
       <ScrollToTop showUnder={160} style={{ right: 10 }}>
-        <span className="UprightText">TOP</span>
+        <span id="UprightText">TOP</span>
       </ScrollToTop>
     </div>
   );

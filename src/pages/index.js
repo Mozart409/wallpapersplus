@@ -2,11 +2,11 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Gallery from "../components/Gallery";
+
 import FeaturedGallery from "../components/FeaturedGallery";
-import CookieScript from "../components/CookieScript";
-import SearchBar from "../components/SearchBar";
 import ToTop from "../components/ToTop";
+import SearchBar from "../components/SearchBar";
+
 import AddRepo from "../components/AddRepo";
 
 function IndexPage() {
@@ -33,10 +33,12 @@ function IndexPage() {
       />
 
       <ToTop></ToTop>
-      <SearchBar></SearchBar>
+      
       <AddRepo></AddRepo>
+      
       <FeaturedGallery></FeaturedGallery>
-      <Gallery></Gallery>
+      <div className="mb-16"></div>
+      <SearchBar></SearchBar>
     </Layout>
   );
 }

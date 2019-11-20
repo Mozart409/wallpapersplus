@@ -1,6 +1,6 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+});
 
 const myQuery = `
 {
@@ -25,8 +25,8 @@ const myQuery = `
 const queries = [
   {
     transformer: ({ data }) => data.allFile.edges.map(({ node }) => node),
-    query: myQuery,
-  },
+    query: myQuery
+  }
 ];
 
 module.exports = {
@@ -34,10 +34,9 @@ module.exports = {
     title: `WPlus`,
     description: `Wallpapers for mobile devices`,
     author: `@mozart409`,
-    siteUrl: 'https://www.wplus.space'
+    siteUrl: "https://www.wplus.space"
   },
   plugins: [
-    
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
@@ -47,19 +46,28 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-sentry",
+      options: {
+        dsn: "YOUR_SENTRY_DSN_URL",
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
+      }
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME,
         queries,
-        chunkSize: 10000, 
-      },
+        chunkSize: 10000
+      }
     },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-
         query: `
           {
             site {
@@ -82,17 +90,17 @@ module.exports = {
             return {
               url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: `daily`,
-              priority: 0.7,
-            }
+              priority: 0.7
+            };
           })
       }
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.wplus.space',
-        sitemap: 'https://www.wplus.space/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        host: "https://www.wplus.space",
+        sitemap: "https://www.wplus.space/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }]
       }
     },
     `gatsby-transformer-sharp`,
@@ -107,8 +115,8 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: false,
         // enable ip anonymization
-        anonymize: true,        
-      },
+        anonymize: true
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

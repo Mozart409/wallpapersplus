@@ -27,15 +27,15 @@ function Gallery() {
     <div>
       <div className="justify-center flex flex-wrap">
         {ImgQuery.allFile.edges.map(({ node }) => (
-          <a
-            href={node.publicURL}
+          <div
             key={node.id}
-            target="_blank"
-            rel="noopener noreferrer"
+            className="w-1/1 md:w-1/3 shadow-2xl border overflow-hidden rounded-lg mx-2 my-4 p-2 bg-white"
           >
-            <div
+            <a
+              href={node.publicURL}
               key={node.id}
-              className="shadow-2xl border overflow-hidden rounded-lg mx-2 my-4 p-2 bg-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 key={node.id}
@@ -43,15 +43,15 @@ function Gallery() {
                 className="rounded-lg w-64 "
                 alt={node.base}
               />
-              <div className="p-2">
-                <div className="flex">
-                  <button className="w-full bg-blue-500 hover:bg-transparent font-semibold hover:text-blue-700 text-white mt-2 px-4 border border-blue-500 text-xs rounded">
-                    {node.prettySize}
-                  </button>
-                </div>
+            </a>
+            <div className="p-2">
+              <div className="flex">
+                <button className="w-full bg-blue-500 hover:bg-transparent font-semibold hover:text-blue-700 text-white mt-2 px-4 border border-blue-500 text-xs rounded">
+                  {node.prettySize}
+                </button>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

@@ -23,7 +23,7 @@ h6,
   background: linear-gradient(to bottom, #2a6baf, #22568c);
 }
 
-.UprightText {
+#UprightText {
   font-weight: bold;
   text-align: center;
   writing-mode: vertical-rl;
@@ -36,4 +36,121 @@ h6,
   color: white;
   background-color: #2a6baf;
   margin: 5px;
+}
+
+.ais-SearchBox-input{
+  border: solid 1px #888888;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  margin-right: 1em;
+}
+.ais-Pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3a4570;
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+}
+
+.ais-Pagination-link {
+  color: #0096db;
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+.ais-Pagination-link:hover,
+.ais-Pagination-link:focus {
+  color: #0073a8;
+}
+
+.ais-Pagination-list {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ais-Pagination-item + .ais-Pagination-item {
+  margin-left: 0.3rem;
+}
+
+.ais-Hits-list,
+.ais-Pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ais-Hits-list,
+.ais-Hits-item {
+  margin: 0.5rem 0 0 -1rem;
+
+  margin-top: -1rem;
+  margin-left: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.ais-Pagination {
+  color: #3a4570;
+}
+.ais-Pagination-list {
+  text-orientation: initial;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ais-Pagination-item + .ais-Pagination-item {
+  margin-left: 0.3rem;
+}
+
+.ais-Pagination-link {
+  padding: 0.3rem 0.6rem;
+  display: block;
+  border: 1px solid #c4c8d8;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+.ais-Pagination-link:hover,
+.ais-Pagination-link:focus {
+  background-color: #e3e5ec;
+}
+.ais-Pagination-item--disabled .ais-Pagination-link {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: #a5abc4;
+}
+.ais-Pagination-item--disabled .ais-Pagination-link:hover,
+.ais-Pagination-item--disabled .ais-Pagination-link:focus {
+  color: #a5abc4;
+  background-color: #fff;
+}
+.ais-Pagination-item--selected .ais-Pagination-link {
+  color: #fff;
+  background-color: #0096db;
+  border-color: #0096db;
+}
+.ais-Pagination-item--selected .ais-Pagination-link:hover,
+.ais-Pagination-item--selected .ais-Pagination-link:focus {
+  color: #fff;
+  writing-mode: horizontal-tb !important;
+  text-decoration: none !important;
 }

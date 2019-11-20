@@ -59,6 +59,13 @@ function Header() {
                 Home
               </Link>
 
+              <Link
+                to="/browse-all"
+                className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
+              >
+                Browse All
+              </Link>
+
               <a
                 className="inline-block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white align-baseline"
                 href="https://drive.google.com/drive/folders/1u_H_5R7Ikq5rcBdmYuj-ayGNrN1zTbzw"
@@ -74,14 +81,6 @@ function Header() {
                 rel="noopener noreferrer"
               >
                 Submit
-              </a>
-              <a
-                href="https://github.com/Mozart409/wallpapersplus/projects/1"
-                className="block md:inline-block mt-4 md:mt-0 mr-6 no-underline text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Changelog
               </a>
             </div>
           </div>
