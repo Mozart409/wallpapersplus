@@ -95,18 +95,24 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
+    
     {
-      resolve: `gatsby-plugin-cookiehub`,
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        // your cookiehub widget ID
-        cookihubId: `67569ecb`,
-        // your google analytics tracking id
-        trackingId: `UA-148437297-1`,
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // enable ip anonymization
-        anonymize: true
-      }
+        id: "GTM-PLZW9T7",
+  
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+  
+        // Specify optional GTM environment details.
+        
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
