@@ -11,7 +11,6 @@ function BrowserAll() {
     <Layout>
       <SEO title="Home" keywords={[`Wallpapers`]} />
       <div>
-        <h1>Browse All</h1>
         <ToTop></ToTop>
         <AddRepo></AddRepo>
         <Gallery></Gallery>
