@@ -8,7 +8,7 @@ import { Carousel } from "antd";
 function FeaturedGallery() {
   const ImgFeatured = useStaticQuery(graphql`
     query FeaturedImages {
-      allFile(filter: { absolutePath: { regex: "/walls/featured/" } }) {
+      allFile(filter: { absolutePath: { regex: "/walls/Featured/" } }) {
         edges {
           node {
             base
