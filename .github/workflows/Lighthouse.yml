@@ -1,0 +1,27 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Lighthouse CI Action
+      uses: treosh/lighthouse-ci-action@v2
+      with:
+        # List of URL(s) to analyze
+        urls: https://wplus.space/
+        # Number of runs to do per URL
+        runs: # optional, default is 1
+        # Path to a Lighthouse budgets.json file
+        budgetPath: # optional
+        # Path to a LHCI lighthouserc.json file
+        configPath: # optional
+        # 
+        temporaryPublicStorage: # optional
+        # Address of a LHCI server
+        upload.serverBaseUrl: # optional
+        # API token to push to LHCI server
+        upload.token: # optional
