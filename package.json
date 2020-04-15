@@ -22,7 +22,7 @@
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
     "@mdx-js/react": "^1.4.5",
     "@rebass/preset": "^4.0.5",
-    "algoliasearch": "^3.35.1",
+    "algoliasearch": "^4.1.0",
     "antd": "^3.23.4",
     "babel-jest": "^25.3.0",
     "babel-plugin-remove-graphql-queries": "^2.7.10",
