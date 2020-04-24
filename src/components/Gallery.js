@@ -15,7 +15,6 @@ function Gallery() {
             publicURL
             ext
             mode
-            dir
             relativeDirectory
           }
         }
@@ -25,11 +24,11 @@ function Gallery() {
   `);
   return (
     <div>
-      <div className="justify-center flex flex-wrap w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {ImgQuery.allFile.edges.map(({ node }) => (
           <div
             key={node.id}
-            className="w-1/1 md:w-1/4 shadow-2xl border rounded-lg mt-16 mb-auto p-2 mx-2 bg-white"
+            className="shadow-2xl border rounded-lg mt-16 mb-auto p-2 mx-2 bg-white"
           >
             <a
               href={node.publicURL}

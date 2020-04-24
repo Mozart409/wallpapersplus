@@ -38,7 +38,7 @@ h6,
   margin: 5px;
 }
 
-.ais-SearchBox-input{
+.ais-SearchBox-input {
   border: solid 1px #888888;
   border-radius: 0.5rem;
   padding-left: 0.5rem;
@@ -96,18 +96,25 @@ h6,
   flex-wrap: wrap;
 }
 
-
 @media (max-width: 640px) {
-  .ais-Hits-list{ width: 50% }
+  .ais-Hits-list {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
-  .ais-Hits-list { width: 50% }
+  .ais-Hits-list {
+    width: 50%;
+  }
 }
 @media (max-width: 992) {
-  .ais-Hits-list { width: 50% }
+  .ais-Hits-list {
+    width: 50%;
+  }
 }
 @media (max-width: 1280px) {
-  .ais-Hits-list { width: 75%; }
+  .ais-Hits-list {
+    width: 75%;
+  }
 }
 
 .ais-Pagination {
@@ -166,4 +173,3 @@ h6,
   writing-mode: horizontal-tb !important;
   text-decoration: none !important;
 }
-

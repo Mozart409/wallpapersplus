@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, keywords, title }) {
@@ -21,25 +21,25 @@ function SEO({ description, lang, meta, keywords, title }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           name: `apple-mobile-web-app-capable`,
-          content: `yes`
-        }
+          content: `yes`,
+        },
       ]
         .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `)
+                content: keywords.join(`, `),
               }
             : []
         )
@@ -51,7 +51,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
+  keywords: [],
 };
 
 SEO.propTypes = {
@@ -59,7 +59,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default SEO;

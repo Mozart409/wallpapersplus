@@ -1,7 +1,6 @@
 import React from "react";
 import algoliasearch from "algoliasearch/lite";
 import { Link } from "gatsby";
-import { Card } from "antd";
 import {
   InstantSearch,
   SearchBox,
@@ -9,7 +8,7 @@ import {
   ClearRefinements,
   RefinementList,
   Configure,
-  Pagination
+  Pagination,
 } from "react-instantsearch-dom";
 
 import AlgoliaLogo from "../images/search-by-algolia-light-background.svg";
@@ -21,7 +20,7 @@ const searchClient = algoliasearch(
 
 function Hit(props) {
   return (
-    <div className="justify-center flex flex-wrap mx-auto">
+    <div className="grid mx-auto">
       <Link to={props.hit.publicURL}>
         <div className="antialiased shadow-2xl border mx-auto rounded-lg mx-2 my-4 p-2 bg-white">
           <img
@@ -65,12 +64,10 @@ function SearchBar() {
         </div>
         <div className="w-1/1 md:w-3/4">
           <SearchBox showLoadingIndicator focusShortcuts={["/"]} />
-          <div className="w-1/1 md:1/4 mt-8">
+          <div className="">
             <Hits hitComponent={Hit} />
           </div>
         </div>
-        
-        
       </InstantSearch>
     </div>
   );

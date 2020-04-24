@@ -23,7 +23,7 @@ function Layout({ children }) {
     <div className="flex flex-col font-sans min-h-screen text-gray-900">
       <Header siteTitle={data.site.siteMetadata.title} />
 
-      <main className="flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
+      <main className="flex flex-col flex-1 bg-white md:justify-center max-w-7xl mx-auto px-4 py-8 md:p-8 w-full">
         {children}
       </main>
 
@@ -56,7 +56,7 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

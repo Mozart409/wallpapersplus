@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -28,19 +28,19 @@ function IndexPage() {
           `Gallery`,
           `wallpaper`,
           `image`,
-          `images`
-          ]}
+          `images`,
+        ]}
       />
 
       <ToTop></ToTop>
-      <Link 
-      className="bg-yellow-500 rounded text-2xl font-semibold text-center text-gray-900 py-2"
-      to="/browse-all"
+      <Link
+        className="bg-yellow-500 rounded text-2xl font-semibold text-center text-gray-900 py-2"
+        to="/browse-all"
       >
-      Browse All Pictures
+        Browse All Pictures
       </Link>
       <AddRepo></AddRepo>
-      
+
       <FeaturedGallery></FeaturedGallery>
       <div className="mb-16"></div>
       <SearchBar></SearchBar>
