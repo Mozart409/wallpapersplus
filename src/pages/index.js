@@ -43,7 +43,7 @@ function IndexPage() {
 
       <FeaturedGallery></FeaturedGallery>
       <div className="mb-16"></div>
-      <SearchBar></SearchBar>
+      {/* <SearchBar></SearchBar> */}
     </Layout>
   );
 }
